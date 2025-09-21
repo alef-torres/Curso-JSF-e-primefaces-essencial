@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.enterprise.inject.Typed;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
@@ -11,6 +12,7 @@ import com.alef.erp.model.Empresa;
 
 public class Empresas implements Serializable {
 
+	@Inject
 	private EntityManager manager;
 
 	public Empresas() {

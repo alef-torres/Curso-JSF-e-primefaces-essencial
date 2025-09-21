@@ -1,5 +1,6 @@
 package com.alef.erp.repository;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -11,7 +12,8 @@ import java.util.List;
 import com.alef.erp.model.RamoAtividade;
 
 public class RamoAtividades implements Serializable {
-
+	
+	@Inject
 	private EntityManager manager;
 
 	public RamoAtividades() {
