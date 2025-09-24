@@ -1,6 +1,7 @@
 package com.alef.erp.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
 
@@ -44,6 +45,9 @@ public class Empresa implements Serializable {
 	
 	@Enumerated(EnumType.STRING)
 	private TipoEmpresa tipo;
+	
+	@Column(precision = 10, scale = 2)
+	private BigDecimal faturamento;
 
 	public Long getId() {
 		return id;
@@ -99,6 +103,14 @@ public class Empresa implements Serializable {
 
 	public void setTipo(TipoEmpresa tipo) {
 		this.tipo = tipo;
+	}
+	
+	public BigDecimal getFaturamento() {
+		return faturamento;
+	}
+
+	public void setFaturamento(BigDecimal faturamento) {
+		this.faturamento = faturamento;
 	}
 
 	@Override
