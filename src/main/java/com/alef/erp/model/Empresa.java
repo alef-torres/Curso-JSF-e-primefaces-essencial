@@ -40,7 +40,7 @@ public class Empresa implements Serializable {
 	private Date dataFundacao;
 
 	@ManyToOne
-	@JoinColumn(name = "ramo_atidade_id")
+	@JoinColumn(name = "ramo_atividade_id")
 	private RamoAtividade ramoAtividade;
 	
 	@Enumerated(EnumType.STRING)
